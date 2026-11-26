@@ -1,0 +1,307 @@
+/**
+ * КемАрт - Стили для динамических блоков
+ * Подключите после kemart-loader.js
+ */
+
+/* ===== ПОРТФОЛИО ===== */
+.kemart-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.kemart-portfolio-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kemart-portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.kemart-portfolio-image {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.kemart-portfolio-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.kemart-portfolio-item:hover .kemart-portfolio-image img {
+  transform: scale(1.05);
+}
+
+.kemart-portfolio-info {
+  padding: 16px;
+}
+
+.kemart-portfolio-title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.kemart-portfolio-category {
+  margin: 0;
+  font-size: 13px;
+  color: #2D98DA;
+  font-weight: 500;
+}
+
+.kemart-portfolio-desc {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ===== СЛАЙДЕР ===== */
+.kemart-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.kemart-slider-item {
+  position: relative;
+  min-height: 400px;
+}
+
+.kemart-slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kemart-slider-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== ОТЗЫВЫ ===== */
+.kemart-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.kemart-review-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.kemart-review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.kemart-review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.kemart-review-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.kemart-review-project {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.kemart-review-stars {
+  color: #fbbf24;
+  font-size: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.kemart-review-text {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ===== УСЛУГИ ===== */
+.kemart-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.kemart-service-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.kemart-service-item:hover {
+  transform: translateY(-4px);
+}
+
+.kemart-service-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.kemart-service-title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.kemart-service-desc {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.kemart-service-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2D98DA;
+  margin-bottom: 16px;
+}
+
+.kemart-service-link {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #2D98DA;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.kemart-service-link:hover {
+  background: #2580b8;
+}
+
+/* ===== FAQ ===== */
+.kemart-faq-list {
+  padding: 20px 0;
+}
+
+.kemart-faq-item {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.kemart-faq-question {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.kemart-faq-question:hover {
+  background: #f9fafb;
+}
+
+.kemart-faq-icon {
+  font-size: 20px;
+  color: #2D98DA;
+  transition: transform 0.3s;
+}
+
+.kemart-faq-item.active .kemart-faq-icon {
+  transform: rotate(45deg);
+}
+
+.kemart-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.kemart-faq-item.active .kemart-faq-answer {
+  max-height: 500px;
+}
+
+.kemart-faq-answer p {
+  padding: 0 20px 16px 20px;
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+  .kemart-portfolio-grid,
+  .kemart-reviews-grid,
+  .kemart-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .kemart-slider-item {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kemart-portfolio-grid,
+  .kemart-reviews-grid,
+  .kemart-services-grid {
+    gap: 12px;
+  }
+  
+  .kemart-review-item,
+  .kemart-service-item {
+    padding: 16px;
+  }
+}

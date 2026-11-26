@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КемАрт - Пример динамической страницы</title>
+  
+  <!-- Ваши существующие стили -->
+  <link rel="stylesheet" href="assets/styles/styles-element.css">
+  <link rel="stylesheet" href="assets/styles/styles-layout.css">
+  
+  <!-- Стили для динамических блоков -->
+  <link rel="stylesheet" href="assets/css/kemart-dynamic.css">
+</head>
+<body>
+
+  <!-- Пример: Секция портфолио -->
+  <section class="portfolio-section">
+    <h2>Наши проекты</h2>
+    
+    <!-- Контейнер для портфолио -->
+    <!-- data-kemart="portfolio" - говорит скрипту подгрузить портфолио -->
+    <!-- data-kemart-template="grid" - шаблон отображения (grid или slider) -->
+    <!-- data-kemart-limit="6" - ограничение количества (0 = все) -->
+    <!-- data-kemart-category="all" - фильтр по категории -->
+    <div class="kemart-portfolio-grid" 
+         data-kemart="portfolio" 
+         data-kemart-template="grid"
+         data-kemart-limit="6"
+         data-kemart-category="all">
+      <!-- Сюда автоматически подгрузятся проекты из админки -->
+      <!-- Пока данные грузятся, можно показать заглушку -->
+      <p>Загрузка проектов...</p>
+    </div>
+  </section>
+
+  <!-- Пример: Секция отзывов -->
+  <section class="reviews-section">
+    <h2>Отзывы клиентов</h2>
+    
+    <div class="kemart-reviews-grid" 
+         data-kemart="reviews"
+         data-kemart-limit="3">
+      <p>Загрузка отзывов...</p>
+    </div>
+  </section>
+
+  <!-- Пример: Секция услуг -->
+  <section class="services-section">
+    <h2>Наши услуги</h2>
+    
+    <div class="kemart-services-grid" 
+         data-kemart="services">
+      <p>Загрузка услуг...</p>
+    </div>
+  </section>
+
+  <!-- Пример: FAQ -->
+  <section class="faq-section">
+    <h2>Частые вопросы</h2>
+    
+    <div class="kemart-faq-list" 
+         data-kemart="faq"
+         data-kemart-template="accordion">
+      <p>Загрузка вопросов...</p>
+    </div>
+  </section>
+
+  <!-- Пример: Контакты (подстановка данных) -->
+  <section class="contacts-section" data-kemart="contacts">
+    <h2>Контакты</h2>
+    
+    <div class="contact-item">
+      <strong>Адрес:</strong>
+      <!-- data-kemart-field="address" - подставит значение из настроек -->
+      <span data-kemart-field="address">г. Кемерово, пр. Советский 2/8, оф. 409</span>
+    </div>
+    
+    <div class="contact-item">
+      <strong>Телефон:</strong>
+      <a href="tel:+79511688008" data-kemart-field="phone1">8-951-168-80-08</a>
+    </div>
+    
+    <div class="contact-item">
+      <strong>Email:</strong>
+      <a href="mailto:kem-art@yandex.ru" data-kemart-field="email">kem-art@yandex.ru</a>
+    </div>
+  </section>
+
+  <!-- Скрипт загрузчика (подключить в конце body) -->
+  <script src="assets/js/kemart-loader.js"></script>
+
+</body>
+</html>
